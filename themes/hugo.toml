@@ -1,0 +1,5 @@
+baseURL = 'http://mnakanishi.github.io/'
+languageCode = 'en-us'
+title = 'Masaki Nakanishi'
+theme = 'blist'
+

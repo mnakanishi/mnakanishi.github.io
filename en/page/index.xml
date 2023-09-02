@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Masaki Nakanishi</title>
-    <link>http://mnakanishi.github.io/en/page/</link>
+    <link>https://mnakanishi.github.io/en/page/</link>
     <description>Recent content in Pages on Masaki Nakanishi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://mnakanishi.github.io/en/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnakanishi.github.io/en/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
-      <link>http://mnakanishi.github.io/en/page/about/</link>
+      <link>https://mnakanishi.github.io/en/page/about/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://mnakanishi.github.io/en/page/about/</guid>
+      <guid>https://mnakanishi.github.io/en/page/about/</guid>
       <description>Welcome to my blog!
 I am a data &amp;amp; research scientist, algorithm developer, and biomedical &amp;amp; neural engineer. I have 10+ years of experiences in developing brain-computer interfaces and its real-world &amp;amp; clinical applications. My goal is to leverage my skills including research design and data analysis to make the world healthier!
 This blog is my memorandum of what I have learned through my research activities. Good results are published as academic papers, while negative results are usually discarded and forgotten.</description>

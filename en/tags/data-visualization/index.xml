@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data visualization on Masaki Nakanishi</title>
+    <link>http://mnakanishi.github.io/en/tags/data-visualization/</link>
+    <description>Recent content in Data visualization on Masaki Nakanishi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Aug 2023 22:41:30 -0700</lastBuildDate><atom:link href="http://mnakanishi.github.io/en/tags/data-visualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My diet challenge in 2023</title>
+      <link>http://mnakanishi.github.io/en/blog/diet_challenge/</link>
+      <pubDate>Tue, 29 Aug 2023 22:41:30 -0700</pubDate>
+      
+      <guid>http://mnakanishi.github.io/en/blog/diet_challenge/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Masaki Nakanishi</title>
+    <link>http://mnakanishi.github.io/en/</link>
+    <description>Recent content on Masaki Nakanishi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Aug 2023 22:41:30 -0700</lastBuildDate><atom:link href="http://mnakanishi.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My diet challenge in 2023</title>
+      <link>http://mnakanishi.github.io/en/blog/diet_challenge/</link>
+      <pubDate>Tue, 29 Aug 2023 22:41:30 -0700</pubDate>
+      
+      <guid>http://mnakanishi.github.io/en/blog/diet_challenge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to fool reviewers with machine learning</title>
+      <link>http://mnakanishi.github.io/en/blog/foolish_ml/</link>
+      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://mnakanishi.github.io/en/blog/foolish_ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>http://mnakanishi.github.io/en/page/about/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://mnakanishi.github.io/en/page/about/</guid>
+      <description>Welcome to my blog!
+I am a data &amp;amp; research scientist, algorithm developer, and biomedical &amp;amp; neural engineer. I have 10+ years of experiences in developing brain-computer interfaces and its real-world &amp;amp; clinical applications. My goal is to leverage my skills including research design and data analysis to make the world healthier!
+This blog is my memorandum of what I have learned through my research activities. Good results are published as academic papers, while negative results are usually discarded and forgotten.</description>
+    </item>
+    
+  </channel>
+</rss>

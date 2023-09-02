@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Masaki Nakanishi</title>
+    <link>http://mnakanishi.github.io/en/tags/</link>
+    <description>Recent content in Tags on Masaki Nakanishi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Aug 2023 22:41:30 -0700</lastBuildDate><atom:link href="http://mnakanishi.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data visualization</title>
+      <link>http://mnakanishi.github.io/en/tags/data-visualization/</link>
+      <pubDate>Tue, 29 Aug 2023 22:41:30 -0700</pubDate>
+      
+      <guid>http://mnakanishi.github.io/en/tags/data-visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Health</title>
+      <link>http://mnakanishi.github.io/en/tags/health/</link>
+      <pubDate>Tue, 29 Aug 2023 22:41:30 -0700</pubDate>
+      
+      <guid>http://mnakanishi.github.io/en/tags/health/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matplotlib</title>
+      <link>http://mnakanishi.github.io/en/tags/matplotlib/</link>
+      <pubDate>Tue, 29 Aug 2023 22:41:30 -0700</pubDate>
+      
+      <guid>http://mnakanishi.github.io/en/tags/matplotlib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pandas</title>
+      <link>http://mnakanishi.github.io/en/tags/pandas/</link>
+      <pubDate>Tue, 29 Aug 2023 22:41:30 -0700</pubDate>
+      
+      <guid>http://mnakanishi.github.io/en/tags/pandas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data leakage</title>
+      <link>http://mnakanishi.github.io/en/tags/data-leakage/</link>
+      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://mnakanishi.github.io/en/tags/data-leakage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine learning</title>
+      <link>http://mnakanishi.github.io/en/tags/machine-learning/</link>
+      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://mnakanishi.github.io/en/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

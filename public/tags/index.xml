@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Masaki Nakanishi</title>
+    <link>https://mnakanishi.github.io/tags/</link>
+    <description>Recent content in Tags on Masaki Nakanishi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 14 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mnakanishi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brain-Computer Interface</title>
+      <link>https://mnakanishi.github.io/tags/brain-computer-interface/</link>
+      <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnakanishi.github.io/tags/brain-computer-interface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data leakage</title>
+      <link>https://mnakanishi.github.io/tags/data-leakage/</link>
+      <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnakanishi.github.io/tags/data-leakage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>EEG</title>
+      <link>https://mnakanishi.github.io/tags/eeg/</link>
+      <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnakanishi.github.io/tags/eeg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Filtering</title>
+      <link>https://mnakanishi.github.io/tags/filtering/</link>
+      <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnakanishi.github.io/tags/filtering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine learning</title>
+      <link>https://mnakanishi.github.io/tags/machine-learning/</link>
+      <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnakanishi.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

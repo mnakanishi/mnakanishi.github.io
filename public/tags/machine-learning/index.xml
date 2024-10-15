@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine learning on Masaki Nakanishi</title>
+    <link>https://mnakanishi.github.io/tags/machine-learning/</link>
+    <description>Recent content in Machine learning on Masaki Nakanishi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 14 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mnakanishi.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tips for Building Practical ML Models for BCI</title>
+      <link>https://mnakanishi.github.io/posts/foolish_ml/</link>
+      <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnakanishi.github.io/posts/foolish_ml/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

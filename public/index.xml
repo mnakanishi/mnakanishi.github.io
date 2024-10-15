@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Masaki Nakanishi</title>
+    <link>https://mnakanishi.github.io/</link>
+    <description>Recent content on Masaki Nakanishi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 14 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mnakanishi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tips for Building Practical ML Models for BCI</title>
+      <link>https://mnakanishi.github.io/posts/foolish_ml/</link>
+      <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnakanishi.github.io/posts/foolish_ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://mnakanishi.github.io/page/about/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnakanishi.github.io/page/about/</guid>
+      <description>Welcome to my blog!
+I am a data scientist, machine learning engineer, algorithm developer in neuraltech and healthtech areas. I have also been an academic researcher for over 10 years. I have extensive experiences in electrophysiological signal processing, brain-computer interfacing and cognitive and clinical research. My goal is to leverage my skills to make the world a healthier place.
+This blog is my memorandum of what I have learned through my research activities.</description>
+    </item>
+    
+  </channel>
+</rss>

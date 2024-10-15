@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Brain-Computer Interface on Masaki Nakanishi</title>
+    <link>https://mnakanishi.github.io/en/tags/brain-computer-interface/</link>
+    <description>Recent content in Brain-Computer Interface on Masaki Nakanishi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 04 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mnakanishi.github.io/en/tags/brain-computer-interface/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tips for Building Practical ML Models for BCI</title>
+      <link>https://mnakanishi.github.io/en/blog/foolish_ml/</link>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnakanishi.github.io/en/blog/foolish_ml/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

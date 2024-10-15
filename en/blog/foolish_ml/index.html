@@ -6,7 +6,7 @@
   <link rel="icon" href="/favicon.svg">
 
   <title>
-  How to fool reviewers with machine learning - Masaki Nakanishi
+  Tips for Building Practical ML Models for BCI - Masaki Nakanishi
   </title>
   <meta name="description" content="Guideline to conduct rigorous studies with machine learning" />
   <meta name="author" content="Masaki Nakanishi" />
@@ -18,22 +18,22 @@
   
   
 
-  <meta property="og:title" content="How to fool reviewers with machine learning" />
+  <meta property="og:title" content="Tips for Building Practical ML Models for BCI" />
 <meta property="og:description" content="Guideline to conduct rigorous studies with machine learning" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mnakanishi.github.io/en/blog/foolish_ml/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2023-08-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-08-04T00:00:00+00:00" />
+<meta property="article:published_time" content="2024-08-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-08-04T00:00:00+00:00" />
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How to fool reviewers with machine learning"/>
+<meta name="twitter:title" content="Tips for Building Practical ML Models for BCI"/>
 <meta name="twitter:description" content="Guideline to conduct rigorous studies with machine learning"/>
 
-  <meta itemprop="name" content="How to fool reviewers with machine learning">
-<meta itemprop="description" content="Guideline to conduct rigorous studies with machine learning"><meta itemprop="datePublished" content="2023-08-04T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-08-04T00:00:00+00:00" />
-<meta itemprop="wordCount" content="368">
-<meta itemprop="keywords" content="Machine learning,Data leakage," />
+  <meta itemprop="name" content="Tips for Building Practical ML Models for BCI">
+<meta itemprop="description" content="Guideline to conduct rigorous studies with machine learning"><meta itemprop="datePublished" content="2024-08-04T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-08-04T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1724">
+<meta itemprop="keywords" content="Machine learning,Data leakage,Brain-Computer Interface,EEG,Filtering," />
 
   
 </head>
@@ -86,12 +86,12 @@
 
   
   <div class="relative max-w-5xl mx-auto px-4">
-    <img src="https://cdn.pixabay.com/photo/2020/04/11/18/05/red-matrix-5031496_1280.jpg" class="rounded-lg shadow-sm w-full object-contain" />
+    <img src="/fool_ml/FreeSpelling300ms.gif" class="rounded-lg shadow-sm w-full object-contain" />
     
     <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
       
   
-    August 4, 2023
+    August 4, 2024
   
 
 
@@ -102,7 +102,7 @@
 
   <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
 
-    <h1 class="text-2xl font-bold mb-2">How to fool reviewers with machine learning</h1>
+    <h1 class="text-2xl font-bold mb-2">Tips for Building Practical ML Models for BCI</h1>
     
     <h5 class="text-sm flex items-center flex-wrap">
       <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -115,7 +115,7 @@
       </svg>
       Posted on 
   
-    August 4, 2023
+    August 4, 2024
   
 
 
@@ -127,7 +127,7 @@
         <circle cx="12" cy="12" r="9" />
         <polyline points="12 7 12 12 15 15" />
       </svg>
-      2&nbsp;minutes
+      9&nbsp;minutes
       &nbsp;&bull;
       <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -137,7 +137,7 @@
         <line x1="12" y1="6" x2="12" y2="19" />
         <line x1="21" y1="6" x2="21" y2="19" />
       </svg>
-      368&nbsp;words
+      1724&nbsp;words
       
     </h5>
     
@@ -156,101 +156,168 @@
 
         
         <li>
-        <a href="#how-data-leackage-occurs">How data Leackage occurs</a>
+        <a href="#common-mistakes-leading-to-unfair-ml-results">Common Mistakes Leading to Unfair ML Results</a>
         
 
         
         <ul>
-            <ul>
             <li>
-        <a href="#using-the-exact-identical-data-in-training-and-test-sets">Using the exact identical data in training and test sets</a>
+        <a href="#allocate-the-same-data-into-training-and-test-sets">Allocate the Same Data into Training and Test Sets</a>
         
 
         
         </li><li>
-        <a href="#non-causal-preprocessing">Non-causal preprocessing</a>
+        <a href="#shuffle-overlapping-sliding-windowed-data">Shuffle Overlapping Sliding Windowed Data</a>
         
 
         
         </li><li>
-        <a href="#overlapping-sliding-window-plus-random-subsampling">Overlapping sliding window plus random subsampling</a>
+        <a href="#apply-a-filter-before-segmenting-data">Apply a Filter Before Segmenting Data</a>
         
 
         
         </li><li>
-        <a href="#parameter-optimization-using-test-data">Parameter optimization using test data</a>
+        <a href="#normalize-test-features-as-a-batch">Normalize Test Features as a Batch</a>
         
 
         
         </li></ul>
-          </ul>
       </li><li>
-        <a href="#how-to-avoid-data-leackage">How to avoid data leackage</a>
+        <a href="#general-guideline-for-evaluating-models">General Guideline for Evaluating Models</a>
         
 
         
         <ul>
-            <ul>
             <li>
-        <a href="#split-data-before-applying-any-preprocessing">Split data before applying any preprocessing</a>
+        <a href="#picture-your-target-application">Picture Your Target Application</a>
         
 
         
         </li><li>
-        <a href="#use-unified-pipeline">Use unified pipeline</a>
-        
-
-        
-        </li><li>
-        <a href="#evaluate-models-with-online-applications">Evaluate models with online applications</a>
-        
-
-        
-        </li><li>
-        <a href="#evaluate-models-with-simulated-online-scenarios">Evaluate models with simulated online scenarios</a>
+        <a href="#implement-an-online-application">Implement an Online Application</a>
         
 
         
         </li></ul>
-          </ul>
       </li><li>
-        <a href="#bottom-line">Bottom line</a>
+        <a href="#summary">Summary</a>
         </li></ul>
   </details>
 
-    <p>Don’t get me wrong.
-I don&rsquo;t mean to suggest you do so.
-I have reviewed 100+ manuscripts submitted to scientific journals and conferences in the fields of biomedical signal processing and machine learning (ML) in the past years.
-What I realized in this experience is how easy it is to, hopefully unintentionally, achieve unfairly good results using ML.</p>
-<p>The most common mistake is data leakage, where information from test data is used to train ML models.
-It might sound like a mistake that only beginners make.
-However, it happens more often than you may think.
+    <p>Over the past several years, I have reviewed over 100 manuscripts submitted to scientific journals and conferences on neural engineering and brain-computer interface (BCI).
+Most of these used machine learning (ML) to classify electrophysiological data, including electroencephalogram (EEG).
+This experience has made me realize how easy it is to achieve unjustifiably excellent results using ML, whether intentionally or unintentionally.</p>
+<p>One of the most common mistakes is data leakage, where information from test data is used to train ML models.
+This might sound like a mistake only beginners make, but it happens more often than you might think.
+Another common mistake stems from a failure to envision an actual application.
+Such studies tend to process data or evaluate models using more resources than are available in real-world situations.</p>
+<p>This article will present some examples of inappropriate use of ML in the context of BCIs that I have encountered.
+These mistakes should be obvious to experienced researchers and engineers but are easy to fall into if one is not careful.
+I don’t intend to provide a comprehensive guideline, but I hope it will help you avoid making similar mistakes when conducting your BCI research using ML.</p>
+<!--
 In fact, many studies in which data leakage occurred have been submitted, which means the senior authors gave go sign.
-Even worse, such studies sometimes pass peer-review!!</p>
-<p>Here I introduce some of such examples without revealing the details of the studies.
-I hope it will help you avoid the same mistake when you conduct a study using ML.</p>
-<h2 id="how-data-leackage-occurs">How data Leackage occurs</h2>
-<h4 id="using-the-exact-identical-data-in-training-and-test-sets">Using the exact identical data in training and test sets</h4>
-<p>ML is for prediction, not for modeling.
-ML models, therefore, should be evaluated using different data from those used for its training.</p>
-<h4 id="non-causal-preprocessing">Non-causal preprocessing</h4>
-<p>The way you apply proprocessing to your data could cause leakage.</p>
-<h4 id="overlapping-sliding-window-plus-random-subsampling">Overlapping sliding window plus random subsampling</h4>
-<p>Sometimes I run into very creative ways to cause data leakage.
-Combining an overlapping sliding window and a random subsampling on time-series data is one of them.</p>
-<p>Let’s assume using a sliding window that overlaps 50 %, which means the second half of the prior window and first half of the second window are exactly the same.
-What if these two consecutive windows are separately allotted into training and test sets as the result of a random subsampling?
-Obviously, both sets would end up having the same information.
-Leakage!</p>
-<p>The worst case I’ve ever seen was using 90 % overlapping sliding windows and then shuffling the windowed data.
-With this approach, I am sure that virtually every single time points were allotted into both training and test sets.</p>
-<h4 id="parameter-optimization-using-test-data">Parameter optimization using test data</h4>
-<h2 id="how-to-avoid-data-leackage">How to avoid data leackage</h2>
-<h4 id="split-data-before-applying-any-preprocessing">Split data before applying any preprocessing</h4>
-<h4 id="use-unified-pipeline">Use unified pipeline</h4>
-<h4 id="evaluate-models-with-online-applications">Evaluate models with online applications</h4>
-<h4 id="evaluate-models-with-simulated-online-scenarios">Evaluate models with simulated online scenarios</h4>
-<h2 id="bottom-line">Bottom line</h2>
+Even worse, such studies sometimes pass peer-review.
+-->
+<h2 id="common-mistakes-leading-to-unfair-ml-results">Common Mistakes Leading to Unfair ML Results</h2>
+<h3 id="allocate-the-same-data-into-training-and-test-sets">Allocate the Same Data into Training and Test Sets</h3>
+<p>This is the most basic mistake when testing the generalizability of an ML model.
+This type of data leakage is rarely seen since everyone knows it must be avoided.
+It can still occur due to programming errors.</p>
+<p>I once saw this leakage in a journal paper that compared the performance of a proposed classification algorithm with an existing state-of-the-art method.
+The paper claimed that the proposed method achieved nearly perfect classification accuracy and dramatically outperformed the comparative one.
+However, the authors later published a commentary explaining that this performance improvement was due to data leakage occurring only in the code evaluating the proposed method.</p>
+<p>Different programming scripts were likely used to evaluate these algorithms (Fig.1A), and the one for the proposed method accidentally used the same data for training and testing.
+With the increasing availability of programs of existing algorithms and the growing complexity of ML architectures, it is understandable that some researchers use completely different scripts to test each algorithm to save time implementing them from scratch.</p>
+<p><img src="/fool_ml/scripting.png" alt="Scripting">
+<em><small>Fig.1 Diagrams of how the evaluation scripts are prepared. (A) Preparing separate scripts for evaluating different algorithms/models. (B) Preparing a script for evaluating all algorithms/models. The former approach could cause more human errors than the latter one.</small></em></p>
+<p>I usually prepare code that can evaluate all comparative algorithms in one script (Fig.1B) rather than preparing different scripts for each algorithm (Fig.1A).
+This approach minimizes the possibility of human errors, such as setting parameters differently or inputting different data across scripts.
+It is also crucial to repeatedly check that the code is implemented correctly, especially when desired results are obtained.
+People make mistakes, so don’t be overconfident.</p>
+<!--
+
+In general, this can be properly done by Sklearn's `train_test_split` fucntion if you use Python. 
+Sometimes you might need to generate a random sequence 
+
+You do not usually see this type of leakage in submitted manuscripts and published articles because we all know this must be avoided. 
+--> 
+<!--
+ML is for prediction, not for modeling.
+ML models, therefore, should be evaluated using different data from those used for its training. 
+-->
+<h3 id="shuffle-overlapping-sliding-windowed-data">Shuffle Overlapping Sliding Windowed Data</h3>
+<p>Sometimes I encounter very creative ways to cause data leakage.
+Shuffling overlapping sliding windows of time-series data is one of them.
+While shuffling can introduce randomness in splitting training and test sets, and the sliding window technique is commonly used to extract time-varying features from time-series data like EEG, combining these can cause problems.</p>
+<p>Let’s assume using sliding windows that overlap by 50% (Fig.2).
+Two consecutive windows share the same data: the second half of a previous window is the same as the first half of the next window.
+If these two windows are separately allotted into training and test sets, both sets end up having the same information.</p>
+<p><img src="/fool_ml/shuffle_windows.png" alt="Shuffling">
+<em><small>Fig.2 Segmenting continuous data into epochs using sliding windows with (A) 0% and (B) 50% overlap. With 50% overlap, the second half of the n-1 th window and the first half of the th window (highlighted in pink) share the same data. If they are allocated to training and test sets separately by shuffling, both sets end up having the same information. Similar things also happen to the data chunks highlighted in light green.</small></em></p>
+<p>The worst case I have seen was using 90% overlapping sliding windows and then randomly splitting the windowed data into training and test sets.
+This approach would have resulted in both sets having nearly all time points multiple times, leading to very high classification accuracy close to the training accuracy.</p>
+<p>I understand the temptation to tweak validation pipelines to achieve better classification performance, but such inventions could be dangerous.
+Your validation pipeline should be designed based on what is appropriate, not performance.
+A general rule of thumb is to avoid random assignment of overlapping sliding windowed time-series data at any cost.</p>
+<h3 id="apply-a-filter-before-segmenting-data">Apply a Filter Before Segmenting Data</h3>
+<p>Preprocessing can cause unintentional data leakage.
+When you apply a filter to your data, how do you design it?
+Today, many useful libraries and tools are available for designing filters, allowing you to implement filters by setting cutoff frequencies without knowing other details.
+But have you ever checked the number of taps (the length, or the order), the impulse response function (IRF), and the frequency response of the filter you implemented?</p>
+<p>Filtering is done by convoluting an IRF into input data, meaning the filtered value at a time point is computed using values at surrounding time points.
+If you design a filter with an ideal frequency response, it could require an infinite length of IRF.
+Applying this filter to your data before segmenting it into an ML-friendly form (e.g., sliding windowed data and epochs), you know what will happen (Fig.3A).</p>
+<p><img src="/fool_ml/filtering.png" alt="Filtering">
+<em><small>Fig.3 Difference between applying (A) a non-causal filter to continuous data and (B) a causal filter to epoched data. Applying a filter to continuous data could lead to unintentional data leakage due to the use of more past and future data points than what is realistically available. A filter should be applied after epoching data.</small></em></p>
+<p>For example, the MNE-Python package provides a user-friendly function for filtering EEG/MEG data.
+If you do not specify any parameters other than cutoff frequencies, the library creates a non-causal finite impulse response (FIR) filter designed by the windowing method.
+It may require a filter length equivalent to tens of seconds or longer.
+Moreover, a non-causal filter requires future data.
+While this may be fine for scientific analyses, it may be infeasible depending on the real-time performance required by your target application.</p>
+<h3 id="normalize-test-features-as-a-batch">Normalize Test Features as a Batch</h3>
+<p>Data normalization is generally recommended to ensure each feature has a similar scale, leading to better performance and faster convergence.</p>
+<p>You know you shouldn’t normalize features before splitting them into training and test sets.
+Additional care should be taken when normalizing test data, even if this step is followed.
+Test data shouldn’t be normalized as a batch.
+In a real situation, an ML model takes one data unit as input and outputs one prediction at a time.
+There is no test “set” so there is not enough data to compute the statistics (i.e., mean and standard deviation) for normalization unless you keep the past data.</p>
+<p>Assuming data is stationary, test data can be normalized using the statistics of a training set.</p>
+<h2 id="general-guideline-for-evaluating-models">General Guideline for Evaluating Models</h2>
+<h3 id="picture-your-target-application">Picture Your Target Application</h3>
+<p>You are building an ML model to predict something in the real world.
+So you know what your target application looks like.
+That includes how much real-time performance is required, how much data is available at a given time, etc.
+With a solid picture, it becomes clear what preprocessing can be applied and how your model should be evaluated.</p>
+<p>The design of applications is up to you as long as it makes sense.
+For example, because EEG varies widely from person to person, it is not uncommon to employ user-specific models rather than a universal model.
+In such cases, performance evaluation should be done within each subject using the hold-out method.
+If you aim to build a universal model, it makes sense to have separate training and test subjects to estimate the model performance on unseen users.
+What must be avoided is mixing up data from all subjects and then applying cross-validation.</p>
+<p>Once you split data, do not touch the test set.
+The entire validation pipeline, including preprocessing and hyperparameter tuning, should be done using the training set.
+If you have multiple models in mind and want to compare their performance, use the training set to select the best model.
+The test set should be used only to validate the generalizability of your model.
+After all, you want to know how well your model will perform on data you haven’t seen yet.</p>
+<h3 id="implement-an-online-application">Implement an Online Application</h3>
+<p>You might have heard that the best way to test the reproducibility of a study is to replicate it.
+The same is true for ML.
+However, this doesn&rsquo;t mean downloading code and data from a GitHub repository and running it on your computer.
+While publishing your code and data is good practice, reproducibility can only be verified by applying it to newly recorded data.</p>
+<p>The most convincing way to show model generalizability is to demonstrate its online application.
+No one would doubt the validity of the model if they experience an online application that operates well.
+An online demonstration can prove that the model works properly on data not included in the training set.
+In fact, top-tier journals on BCIs have begun requiring results from online experiments.</p>
+<p>When we submitted a manuscript about our high-speed BCI speller, I initially drafted it based on the results from offline analysis.
+However, we decided to add online experiments to further strengthen the study.
+The online results showed comparable performance to the offline analysis, proving the validity of our proposed algorithm.
+As a result, the manuscript was accepted and published in IEEE Transactions on Biomedical Engineering.
+The top image of this page is a demo video about our online BCI speller.
+Isn’t it more convincing than just figures and tables in a paper?</p>
+<h2 id="summary">Summary</h2>
+<p>This article presented common mistakes leading to unreasonably favorable results and its solutions.
+These mistakes may be inconceivable for experienced researchers, but they are all what I actually found while reading or reviewing papers.
+Your goal should be to create a real-world application using ML, not just to add a line to your publication list (although that is important).
+If you keep this in mind, you will never make such mistakes and accidentally fool reviewers, readers, and yourself.</p>
   </article>
 <div class="px-2 mb-2">
   
@@ -596,7 +663,7 @@ With this approach, I am sure that virtually every single time points were allot
     </main><footer class="container p-6 mx-auto flex justify-between items-center">
   <span class="text-sm font-light">
     
-    Copyright © 2023 - Masaki Nakanishi· All rights reserved
+    Copyright © 2024 - Masaki Nakanishi· All rights reserved
     
   </span>
   <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">

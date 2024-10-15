@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
+   sodipodi:docname="scripting.svg">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker7532"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path7530" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker7522"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path7520" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker7512"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path7510" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker7502"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path7500" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker7416"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path7414" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker7368"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path7366" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker7328"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path7326" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleOutM"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path7163" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.93"
+     inkscape:cx="1135.9357"
+     inkscape:cy="651.20911"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="2208"
+     inkscape:window-height="1220"
+     inkscape:window-x="195"
+     inkscape:window-y="97"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="74.871454,249.14982"
+       orientation="0,-1"
+       id="guide6762" />
+    <sodipodi:guide
+       position="162.73298,240.66936"
+       orientation="1,0"
+       id="guide6764" />
+    <sodipodi:guide
+       position="74.871454,240.70567"
+       orientation="1,0"
+       id="guide6766" />
+    <sodipodi:guide
+       position="127.50665,209.7438"
+       orientation="0,-1"
+       id="guide6768" />
+    <sodipodi:guide
+       position="62.768172,283.2079"
+       orientation="1,0"
+       id="guide6770" />
+    <sodipodi:guide
+       position="104.1445,259.28281"
+       orientation="0,-1"
+       id="guide6772" />
+    <sodipodi:guide
+       position="150.21505,241.23835"
+       orientation="1,0"
+       id="guide6802" />
+    <sodipodi:guide
+       position="55.168438,119.67288"
+       orientation="0,-1"
+       id="guide6804" />
+    <sodipodi:guide
+       position="96.826241,271.94903"
+       orientation="0,-1"
+       id="guide6808" />
+    <sodipodi:guide
+       position="225.03808,194.01165"
+       orientation="1,0"
+       id="guide6867" />
+    <sodipodi:guide
+       position="344.52732,196.85664"
+       orientation="1,0"
+       id="guide6893" />
+    <sodipodi:guide
+       position="125.7482,191.73567"
+       orientation="1,0"
+       id="guide6956" />
+    <sodipodi:guide
+       position="188.05331,203.1156"
+       orientation="1,0"
+       id="guide6982" />
+    <sodipodi:guide
+       position="250.07392,209.74381"
+       orientation="1,0"
+       id="guide6984" />
+    <sodipodi:guide
+       position="85.064964,178.64875"
+       orientation="0,-1"
+       id="guide7010" />
+    <sodipodi:guide
+       position="95.3069,223.03047"
+       orientation="1,0"
+       id="guide7767" />
+    <sodipodi:guide
+       position="318.63799,234.6949"
+       orientation="1,0"
+       id="guide7773" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.992359;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect7841"
+       width="383.50357"
+       height="133.71417"
+       x="95.3069"
+       y="107.54031"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="path6823"
+       style="fill:#c7e7ff;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 138.46705,146.25828 v 12.66622 h 12.10328 m -12.10328,-12.66622 12.10328,12.66622 m 6e-5,-1.2e-4 v 46.44294 c 0,1.71529 -1.3809,3.09619 -3.09619,3.09619 h -43.6281 c -1.71529,0 -3.09619,-1.3809 -3.09619,-3.09619 v -56.01285 c 0,-1.71529 1.3809,-3.09619 3.09619,-3.09619 v 0 h 34.62095"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="105.10151"
+       y="179.33121"
+       id="text6800"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan6798"
+         x="105.10151"
+         y="179.33121"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583">model_A.py</tspan></text>
+    <path
+       id="path6820"
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 357.1407,146.36937 v 12.66622 h 12.10328 m -12.10328,-12.66622 12.10328,12.66622 m 6e-5,-1.2e-4 v 46.44295 c 0,1.71529 -1.3809,3.09619 -3.09619,3.09619 h -43.6281 c -1.71529,0 -3.09619,-1.3809 -3.09619,-3.09619 v -56.01286 c 0,-1.71529 1.3809,-3.09619 3.09619,-3.09619 v 0 h 34.62095"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#add4ff;fill-opacity:1;stroke:none;stroke-width:0.797872;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 139.34812,153.27068 v -4.88822 l 0.47181,0.49023 c 0.25949,0.26963 1.91733,2.01018 3.68407,3.86789 1.76675,1.85771 3.65861,3.83681 4.20414,4.39799 l 0.99187,1.02034 h -4.67594 -4.67595 z"
+       id="path6825"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="path6827"
+       style="fill:#ffe7ff;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 201.1306,146.33793 v 12.66622 h 12.10328 m -12.10328,-12.66622 12.10328,12.66622 m 6e-5,-1.2e-4 v 46.44294 c 0,1.71529 -1.3809,3.09619 -3.09619,3.09619 h -43.6281 c -1.71529,0 -3.09619,-1.3809 -3.09619,-3.09619 v -56.01285 c 0,-1.71529 1.3809,-3.09619 3.09619,-3.09619 v 0 h 34.62095"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="167.76527"
+       y="179.41087"
+       id="text6831"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan6829"
+         x="167.76527"
+         y="179.41087"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583">model_B.py</tspan></text>
+    <path
+       style="fill:#ffbcff;fill-opacity:1;stroke:none;stroke-width:0.797872;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 202.01167,153.35034 v -4.88823 l 0.4718,0.49023 c 0.2595,0.26963 1.91733,2.01018 3.68408,3.86789 1.76674,1.85771 3.6586,3.83681 4.20413,4.39799 l 0.99187,1.02034 h -4.67594 -4.67594 z"
+       id="path6833"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="path6827-0"
+       style="fill:#c7f3bd;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 262.86369,146.17959 v 12.66622 h 12.10328 m -12.10328,-12.66622 12.10328,12.66622 m 6e-5,-1.2e-4 v 46.44294 c 0,1.71529 -1.3809,3.09619 -3.09619,3.09619 h -43.6281 c -1.71529,0 -3.09619,-1.3809 -3.09619,-3.09619 v -56.01284 c 0,-1.7153 1.3809,-3.0962 3.09619,-3.0962 v 0 h 34.62095"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.76111px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="229.4984"
+       y="179.25255"
+       id="text6831-0"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan6829-3"
+         x="229.4984"
+         y="179.25255"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583">model_C.py</tspan></text>
+    <path
+       style="fill:#91d49d;fill-opacity:1;stroke:none;stroke-width:0.797872;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 263.74476,153.192 v -4.88823 l 0.4718,0.49023 c 0.2595,0.26963 1.91733,2.01018 3.68408,3.86789 1.76674,1.85771 3.6586,3.83681 4.20413,4.39799 l 0.99187,1.02034 h -4.67594 -4.67594 z"
+       id="path6833-8"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.76111px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="331.64691"
+       y="179.57521"
+       id="text6831-0-5"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan6829-3-1"
+         x="331.64691"
+         y="179.57521"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583">eval.py</tspan></text>
+    <g
+       id="g7761"
+       transform="translate(0,1.5875)"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:#312e2e;fill-opacity:1;stroke:none;stroke-width:1.06751;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect7668"
+         width="95.8759"
+         height="31.5793"
+         x="377.8136"
+         y="159.888" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:0.85;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="380.41147"
+         y="168.39256"
+         id="text6800-1"><tspan
+           sodipodi:role="line"
+           x="380.41147"
+           y="168.39256"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+           id="tspan6919"><tspan
+   style="fill:#d9a1dd;fill-opacity:1"
+   id="tspan7670">for</tspan> <tspan
+   style="fill:#95c3e1;fill-opacity:1"
+   id="tspan7686">model</tspan> <tspan
+   style="fill:#d9a1dd;fill-opacity:1"
+   id="tspan7684">in</tspan> <tspan
+   style="fill:#95c3e1;fill-opacity:1"
+   id="tspan7700">models</tspan><tspan
+   style="fill:#ffffff;fill-opacity:1"
+   id="tspan7724">:</tspan></tspan><tspan
+           sodipodi:role="line"
+           x="380.41147"
+           y="177.38837"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+           id="tspan6923">   <tspan
+   style="fill:#95c3e1;fill-opacity:1"
+   id="tspan7702">model</tspan><tspan
+   style="fill:#ffffff;fill-opacity:1"
+   id="tspan7726">.</tspan><tspan
+   style="fill:#f1ee00;fill-opacity:1"
+   id="tspan7712">fit</tspan><tspan
+   style="fill:#ffffff;fill-opacity:1"
+   id="tspan7728">(</tspan><tspan
+   style="fill:#95c3e1;fill-opacity:1"
+   id="tspan7706">X_train</tspan><tspan
+   style="fill:#ffffff;fill-opacity:1"
+   id="tspan7730">)</tspan></tspan><tspan
+           sodipodi:role="line"
+           x="380.41147"
+           y="186.38417"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+           id="tspan6925">   <tspan
+   style="fill:#95c3e1;fill-opacity:1"
+   id="tspan7710">y</tspan> <tspan
+   style="fill:#ffffff;fill-opacity:1"
+   id="tspan7732">=</tspan> <tspan
+   style="fill:#95c3e1;fill-opacity:1"
+   id="tspan7704">model</tspan>.<tspan
+   style="fill:#f1ee00;fill-opacity:1"
+   id="tspan7722">predict</tspan><tspan
+   style="fill:#ffffff;fill-opacity:1"
+   id="tspan7734">(</tspan><tspan
+   style="fill:#95c3e1;fill-opacity:1"
+   id="tspan7708">X_test</tspan><tspan
+   style="fill:#ffffff;fill-opacity:1"
+   id="tspan7736">)</tspan></tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="112.04996"
+       y="125.63249"
+       id="text6800-0"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan6798-2"
+         x="112.04996"
+         y="125.63249"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583">Dataset</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="174.1243"
+       y="125.51035"
+       id="text6800-0-6"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan6798-2-6"
+         x="174.1243"
+         y="125.51035"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583">Dataset</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="236.46361"
+       y="125.51035"
+       id="text6800-0-6-8"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan6798-2-6-0"
+         x="236.46361"
+         y="125.51035"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583">Dataset</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="330.65543"
+       y="126.03951"
+       id="text7014"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan7012"
+         x="330.65543"
+         y="126.03951"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583">Dataset</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+       d="m 125.7482,129.64581 v 11.66443"
+       id="path7016"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7328)"
+       d="m 187.66079,129.64581 v 11.66443"
+       id="path7324"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7368)"
+       d="m 250.10249,129.64581 v 11.66443"
+       id="path7364"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7416)"
+       d="m 344.82338,129.64581 v 11.66443"
+       id="path7412"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7532)"
+       d="m 125.7482,211.66668 v 11.66443"
+       id="path7492"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7522)"
+       d="m 187.66079,211.66668 v 11.66443"
+       id="path7494"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7512)"
+       d="m 250.10249,211.66668 v 11.66443"
+       id="path7496"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7502)"
+       d="m 344.82338,211.66668 v 11.66443"
+       id="path7498"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="112.57912"
+       y="236.22844"
+       id="text7654"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan7652"
+         x="112.57912"
+         y="236.22844"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583">Metrics</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="175.55"
+       y="236.22844"
+       id="text7658"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan7656"
+         x="175.55"
+         y="236.22844"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583">Metrics</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="237.46259"
+       y="236.22844"
+       id="text7662"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan7660"
+         x="237.46259"
+         y="236.22844"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583">Metrics</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="332.18329"
+       y="236.22844"
+       id="text7666"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan7664"
+         x="332.18329"
+         y="236.22844"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.264583">Metrics</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="99.190636"
+       y="117.74051"
+       id="text7765"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan7763"
+         x="99.190636"
+         y="117.74051"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.87778px;font-family:arial;-inkscape-font-specification:'arial Bold';stroke-width:0.264583">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="317.73636"
+       y="117.74051"
+       id="text7771"
+       inkscape:export-filename="/Users/masaki/Dropbox/private/blog/post_prep/fool_ml/scripting.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan7769"
+         x="317.73636"
+         y="117.74051"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.87778px;font-family:arial;-inkscape-font-specification:'arial Bold';stroke-width:0.264583">B</tspan></text>
+  </g>
+</svg>

@@ -6,56 +6,47 @@
     <description>Recent content in Tags on Masaki Nakanishi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Aug 2023 22:41:30 -0700</lastBuildDate><atom:link href="https://mnakanishi.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mnakanishi.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Data visualization</title>
-      <link>https://mnakanishi.github.io/en/tags/data-visualization/</link>
-      <pubDate>Tue, 29 Aug 2023 22:41:30 -0700</pubDate>
+      <title>Brain-Computer Interface</title>
+      <link>https://mnakanishi.github.io/en/tags/brain-computer-interface/</link>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://mnakanishi.github.io/en/tags/data-visualization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Health</title>
-      <link>https://mnakanishi.github.io/en/tags/health/</link>
-      <pubDate>Tue, 29 Aug 2023 22:41:30 -0700</pubDate>
-      
-      <guid>https://mnakanishi.github.io/en/tags/health/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Matplotlib</title>
-      <link>https://mnakanishi.github.io/en/tags/matplotlib/</link>
-      <pubDate>Tue, 29 Aug 2023 22:41:30 -0700</pubDate>
-      
-      <guid>https://mnakanishi.github.io/en/tags/matplotlib/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pandas</title>
-      <link>https://mnakanishi.github.io/en/tags/pandas/</link>
-      <pubDate>Tue, 29 Aug 2023 22:41:30 -0700</pubDate>
-      
-      <guid>https://mnakanishi.github.io/en/tags/pandas/</guid>
+      <guid>https://mnakanishi.github.io/en/tags/brain-computer-interface/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data leakage</title>
       <link>https://mnakanishi.github.io/en/tags/data-leakage/</link>
-      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mnakanishi.github.io/en/tags/data-leakage/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>EEG</title>
+      <link>https://mnakanishi.github.io/en/tags/eeg/</link>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnakanishi.github.io/en/tags/eeg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Filtering</title>
+      <link>https://mnakanishi.github.io/en/tags/filtering/</link>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnakanishi.github.io/en/tags/filtering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Machine learning</title>
       <link>https://mnakanishi.github.io/en/tags/machine-learning/</link>
-      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mnakanishi.github.io/en/tags/machine-learning/</guid>
       <description></description>

@@ -6,20 +6,11 @@
     <description>Recent content on Masaki Nakanishi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Aug 2023 22:41:30 -0700</lastBuildDate><atom:link href="https://mnakanishi.github.io/en/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mnakanishi.github.io/en/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My diet challenge in 2023</title>
-      <link>https://mnakanishi.github.io/en/blog/diet_challenge/</link>
-      <pubDate>Tue, 29 Aug 2023 22:41:30 -0700</pubDate>
-      
-      <guid>https://mnakanishi.github.io/en/blog/diet_challenge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>How to fool reviewers with machine learning</title>
+      <title>Tips for Building Practical ML Models for BCI</title>
       <link>https://mnakanishi.github.io/en/blog/foolish_ml/</link>
-      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mnakanishi.github.io/en/blog/foolish_ml/</guid>
       <description></description>

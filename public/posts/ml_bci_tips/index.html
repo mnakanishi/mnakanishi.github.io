@@ -1,3 +1,777 @@
-<head>
-    
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.svg">
+
+  <title>
+  Tips for Building Practical ML Models for BCI - Masaki Nakanishi
+  </title>
+  <meta name="description" content="Guideline to conduct rigorous studies with machine learning" />
+  <meta name="author" content="Masaki Nakanishi" />
+  <meta name="generator" content="Hugo 0.116.1"><link
+    rel="stylesheet"
+    href="https://mnakanishi.github.io/css/styles.min.eb7fe02195897f2fd20b6dcb5f80cda854ce0b58dcf3a28f1d23166a1eaaded4.css"
+    integrity="sha256-63/gIZWJfy/SC23LX4DNqFTOC1jc86KPHSMWah6q3tQ="
+  />
+  
+  
+
+  <meta property="og:title" content="Tips for Building Practical ML Models for BCI" />
+<meta property="og:description" content="Guideline to conduct rigorous studies with machine learning" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mnakanishi.github.io/posts/ml_bci_tips/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-10-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-10-14T00:00:00+00:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tips for Building Practical ML Models for BCI"/>
+<meta name="twitter:description" content="Guideline to conduct rigorous studies with machine learning"/>
+
+  <meta itemprop="name" content="Tips for Building Practical ML Models for BCI">
+<meta itemprop="description" content="Guideline to conduct rigorous studies with machine learning"><meta itemprop="datePublished" content="2024-10-14T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-10-14T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1724">
+<meta itemprop="keywords" content="Machine learning,Data leakage,Brain-Computer Interface,EEG,Filtering," />
+
+  
 </head>
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="https://mnakanishi.github.io/" class="capitalize font-extrabold text-2xl">
+    
+    <img src="/brain.png" alt="Masaki Nakanishi" class="h-8 max-w-full" />
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
+
+    
+    <li><a href="/posts">Blog</a></li>
+    
+    <li><a href="/page/about">About</a></li>
+    
+    <li><a href="/tags">Tags</a></li>
+    
+
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main class="flex-1">
+  
+  
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="/fool_ml/FreeSpelling300ms.gif" class="rounded-lg shadow-sm w-full object-contain" />
+    
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      
+  
+    October 14, 2024
+  
+
+
+    </div>
+    
+  </div>
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">Tips for Building Practical ML Models for BCI</h1>
+    
+    <h5 class="text-sm flex items-center flex-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      Posted on 
+  
+    October 14, 2024
+  
+
+
+      
+        &nbsp;&bull;&nbsp;
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      9&nbsp;minutes
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      1724&nbsp;words
+      
+    </h5>
+    
+
+    <details id="TableOfContents" class="px-4 mt-4 bg-gray-100 dark:bg-gray-700 rounded toc">
+    <summary class="flex items-center font-bold py-2 px-4 cursor-pointer justify-between select-none text-black dark:text-white">
+      <span>Table of contents</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <polyline points="6 9 12 15 18 9"></polyline>
+     </svg>
+    </summary>
+
+    <ul class="mt-2 pb-4">
+        
+
+        
+        <li>
+        <a href="#common-mistakes-leading-to-unfair-ml-results">Common Mistakes Leading to Unfair ML Results</a>
+        
+
+        
+        <ul>
+            <li>
+        <a href="#allocate-the-same-data-into-training-and-test-sets">Allocate the Same Data into Training and Test Sets</a>
+        
+
+        
+        </li><li>
+        <a href="#shuffle-overlapping-sliding-windowed-data">Shuffle Overlapping Sliding Windowed Data</a>
+        
+
+        
+        </li><li>
+        <a href="#apply-a-filter-before-segmenting-data">Apply a Filter Before Segmenting Data</a>
+        
+
+        
+        </li><li>
+        <a href="#normalize-test-features-as-a-batch">Normalize Test Features as a Batch</a>
+        
+
+        
+        </li></ul>
+      </li><li>
+        <a href="#general-guideline-for-evaluating-models">General Guideline for Evaluating Models</a>
+        
+
+        
+        <ul>
+            <li>
+        <a href="#picture-your-target-application">Picture Your Target Application</a>
+        
+
+        
+        </li><li>
+        <a href="#implement-an-online-application">Implement an Online Application</a>
+        
+
+        
+        </li></ul>
+      </li><li>
+        <a href="#summary">Summary</a>
+        </li></ul>
+  </details>
+
+    <p>Over the past several years, I have reviewed over 100 manuscripts submitted to scientific journals and conferences on neural engineering and brain-computer interface (BCI).
+Most of these used machine learning (ML) to classify electrophysiological data, including electroencephalogram (EEG).
+This experience has made me realize how easy it is to achieve unjustifiably excellent results using ML, whether intentionally or unintentionally.</p>
+<p>One of the most common mistakes is data leakage, where information from test data is used to train ML models.
+This might sound like a mistake only beginners make, but it happens more often than you might think.
+Another common mistake stems from a failure to envision an actual application.
+Such studies tend to process data or evaluate models using more resources than are available in real-world situations.</p>
+<p>This article will present some examples of inappropriate use of ML in the context of BCIs that I have encountered.
+These mistakes should be obvious to experienced researchers and engineers but are easy to fall into if one is not careful.
+I don’t intend to provide a comprehensive guideline, but I hope it will help you avoid making similar mistakes when conducting your BCI research using ML.</p>
+<!--
+In fact, many studies in which data leakage occurred have been submitted, which means the senior authors gave go sign.
+Even worse, such studies sometimes pass peer-review.
+-->
+<h2 id="common-mistakes-leading-to-unfair-ml-results">Common Mistakes Leading to Unfair ML Results</h2>
+<h3 id="allocate-the-same-data-into-training-and-test-sets">Allocate the Same Data into Training and Test Sets</h3>
+<p>This is the most basic mistake when testing the generalizability of an ML model.
+This type of data leakage is rarely seen since everyone knows it must be avoided.
+It can still occur due to programming errors.</p>
+<p>I once saw this leakage in a journal paper that compared the performance of a proposed classification algorithm with an existing state-of-the-art method.
+The paper claimed that the proposed method achieved nearly perfect classification accuracy and dramatically outperformed the comparative one.
+However, the authors later published a commentary explaining that this performance improvement was due to data leakage occurring only in the code evaluating the proposed method.</p>
+<p>Different programming scripts were likely used to evaluate these algorithms (Fig.1A), and the one for the proposed method accidentally used the same data for training and testing.
+With the increasing availability of programs of existing algorithms and the growing complexity of ML architectures, it is understandable that some researchers use completely different scripts to test each algorithm to save time implementing them from scratch.</p>
+<p><img src="/fool_ml/scripting.png" alt="Scripting">
+<em><small>Fig.1 Diagrams of how the evaluation scripts are prepared. (A) Preparing separate scripts for evaluating different algorithms/models. (B) Preparing a script for evaluating all algorithms/models. The former approach could cause more human errors than the latter one.</small></em></p>
+<p>I usually prepare code that can evaluate all comparative algorithms in one script (Fig.1B) rather than preparing different scripts for each algorithm (Fig.1A).
+This approach minimizes the possibility of human errors, such as setting parameters differently or inputting different data across scripts.
+It is also crucial to repeatedly check that the code is implemented correctly, especially when desired results are obtained.
+People make mistakes, so don’t be overconfident.</p>
+<!--
+
+In general, this can be properly done by Sklearn's `train_test_split` fucntion if you use Python. 
+Sometimes you might need to generate a random sequence 
+
+You do not usually see this type of leakage in submitted manuscripts and published articles because we all know this must be avoided. 
+--> 
+<!--
+ML is for prediction, not for modeling.
+ML models, therefore, should be evaluated using different data from those used for its training. 
+-->
+<h3 id="shuffle-overlapping-sliding-windowed-data">Shuffle Overlapping Sliding Windowed Data</h3>
+<p>Sometimes I encounter very creative ways to cause data leakage.
+Shuffling overlapping sliding windows of time-series data is one of them.
+While shuffling can introduce randomness in splitting training and test sets, and the sliding window technique is commonly used to extract time-varying features from time-series data like EEG, combining these can cause problems.</p>
+<p>Let’s assume using sliding windows that overlap by 50% (Fig.2).
+Two consecutive windows share the same data: the second half of a previous window is the same as the first half of the next window.
+If these two windows are separately allotted into training and test sets, both sets end up having the same information.</p>
+<p><img src="/fool_ml/shuffle_windows.png" alt="Shuffling">
+<em><small>Fig.2 Segmenting continuous data into epochs using sliding windows with (A) 0% and (B) 50% overlap. With 50% overlap, the second half of the n-1 th window and the first half of the th window (highlighted in pink) share the same data. If they are allocated to training and test sets separately by shuffling, both sets end up having the same information. Similar things also happen to the data chunks highlighted in light green.</small></em></p>
+<p>The worst case I have seen was using 90% overlapping sliding windows and then randomly splitting the windowed data into training and test sets.
+This approach would have resulted in both sets having nearly all time points multiple times, leading to very high classification accuracy close to the training accuracy.</p>
+<p>I understand the temptation to tweak validation pipelines to achieve better classification performance, but such inventions could be dangerous.
+Your validation pipeline should be designed based on what is appropriate, not performance.
+A general rule of thumb is to avoid random assignment of overlapping sliding windowed time-series data at any cost.</p>
+<h3 id="apply-a-filter-before-segmenting-data">Apply a Filter Before Segmenting Data</h3>
+<p>Preprocessing can cause unintentional data leakage.
+When you apply a filter to your data, how do you design it?
+Today, many useful libraries and tools are available for designing filters, allowing you to implement filters by setting cutoff frequencies without knowing other details.
+But have you ever checked the number of taps (the length, or the order), the impulse response function (IRF), and the frequency response of the filter you implemented?</p>
+<p>Filtering is done by convoluting an IRF into input data, meaning the filtered value at a time point is computed using values at surrounding time points.
+If you design a filter with an ideal frequency response, it could require an infinite length of IRF.
+Applying this filter to your data before segmenting it into an ML-friendly form (e.g., sliding windowed data and epochs), you know what will happen (Fig.3A).</p>
+<p><img src="/fool_ml/filtering.png" alt="Filtering">
+<em><small>Fig.3 Difference between applying (A) a non-causal filter to continuous data and (B) a causal filter to epoched data. Applying a filter to continuous data could lead to unintentional data leakage due to the use of more past and future data points than what is realistically available. A filter should be applied after epoching data.</small></em></p>
+<p>For example, the MNE-Python package provides a user-friendly function for filtering EEG/MEG data.
+If you do not specify any parameters other than cutoff frequencies, the library creates a non-causal finite impulse response (FIR) filter designed by the windowing method.
+It may require a filter length equivalent to tens of seconds or longer.
+Moreover, a non-causal filter requires future data.
+While this may be fine for scientific analyses, it may be infeasible depending on the real-time performance required by your target application.</p>
+<h3 id="normalize-test-features-as-a-batch">Normalize Test Features as a Batch</h3>
+<p>Data normalization is generally recommended to ensure each feature has a similar scale, leading to better performance and faster convergence.</p>
+<p>You know you shouldn’t normalize features before splitting them into training and test sets.
+Additional care should be taken when normalizing test data, even if this step is followed.
+Test data shouldn’t be normalized as a batch.
+In a real situation, an ML model takes one data unit as input and outputs one prediction at a time.
+There is no test “set” so there is not enough data to compute the statistics (i.e., mean and standard deviation) for normalization unless you keep the past data.</p>
+<p>Assuming data is stationary, test data can be normalized using the statistics of a training set.</p>
+<h2 id="general-guideline-for-evaluating-models">General Guideline for Evaluating Models</h2>
+<h3 id="picture-your-target-application">Picture Your Target Application</h3>
+<p>You are building an ML model to predict something in the real world.
+So you know what your target application looks like.
+That includes how much real-time performance is required, how much data is available at a given time, etc.
+With a solid picture, it becomes clear what preprocessing can be applied and how your model should be evaluated.</p>
+<p>The design of applications is up to you as long as it makes sense.
+For example, because EEG varies widely from person to person, it is not uncommon to employ user-specific models rather than a universal model.
+In such cases, performance evaluation should be done within each subject using the hold-out method.
+If you aim to build a universal model, it makes sense to have separate training and test subjects to estimate the model performance on unseen users.
+What must be avoided is mixing up data from all subjects and then applying cross-validation.</p>
+<p>Once you split data, do not touch the test set.
+The entire validation pipeline, including preprocessing and hyperparameter tuning, should be done using the training set.
+If you have multiple models in mind and want to compare their performance, use the training set to select the best model.
+The test set should be used only to validate the generalizability of your model.
+After all, you want to know how well your model will perform on data you haven’t seen yet.</p>
+<h3 id="implement-an-online-application">Implement an Online Application</h3>
+<p>You might have heard that the best way to test the reproducibility of a study is to replicate it.
+The same is true for ML.
+However, this doesn&rsquo;t mean downloading code and data from a GitHub repository and running it on your computer.
+While publishing your code and data is good practice, reproducibility can only be verified by applying it to newly recorded data.</p>
+<p>The most convincing way to show model generalizability is to demonstrate its online application.
+No one would doubt the validity of the model if they experience an online application that operates well.
+An online demonstration can prove that the model works properly on data not included in the training set.
+In fact, top-tier journals on BCIs have begun requiring results from online experiments.</p>
+<p>When we submitted a manuscript about our high-speed BCI speller, I initially drafted it based on the results from offline analysis.
+However, we decided to add online experiments to further strengthen the study.
+The online results showed comparable performance to the offline analysis, proving the validity of our proposed algorithm.
+As a result, the manuscript was accepted and published in IEEE Transactions on Biomedical Engineering.
+The top image of this page is a demo video about our online BCI speller.
+Isn’t it more convincing than just figures and tables in a paper?</p>
+<h2 id="summary">Summary</h2>
+<p>This article presented common mistakes leading to unreasonably favorable results and its solutions.
+These mistakes may be inconceivable for experienced researchers, but they are all what I actually found while reading or reviewing papers.
+Your goal should be to create a real-world application using ML, not just to add a line to your publication list (although that is important).
+If you keep this in mind, you will never make such mistakes and accidentally fool reviewers, readers, and yourself.</p>
+  </article>
+<div class="px-2 mb-2">
+  
+  <script src="https://giscus.app/client.js"
+    data-repo="mnakanishi/giscus"
+    data-repo-id="R_kgDOKOd5GQ"
+    data-category="General"
+    data-category-id="DIC_kwDOKOd5Gc4CZCNB"
+    data-mapping="title"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</div>
+<div class="bg-blue-100 dark:bg-gray-900">
+  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Follow me</div>
+      <p class="opacity-60"></p>
+    </div>
+
+    <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
+      
+
+      
+      <li>
+        <a
+          href="https://twitter.com/nakany"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a
+          href="https://linkedin.com/in/mnakanishi"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a
+          href="https://github.com/mnakanishi"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+            />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a
+          href="https://scholar.google.com/citations?hl=en&amp;user=u4ChhSUAAAAJ"
+          target="_blank"
+          rel="noopener"
+          aria-label="Google Scholar"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-googlescholar"
+              width="22"
+              height="23"
+              viewBox="0 0 24 24"
+              stroke-width="1.4"
+              stroke="currentColor"
+              fill="none">
+            <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a
+          href="https://facebook.com/masaki.nakanishi.3"
+          target="_blank"
+          rel="noopener"
+          aria-label="Facebook"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+    </ul>
+  </div>
+</div>
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    Copyright © 2024 - Masaki Nakanishi· All rights reserved
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://mnakanishi.github.io/js/scripts.min.js"></script>
+
+
+
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
+</html>

@@ -185,3 +185,6 @@ DefaultContentLanguageInSubdir = false
   [markup.goldmark.renderer]
     # Enable to include inline HTML
     unsafe = true
+
+# Google Analytics 4
+GoogleAnalyticsID = 'G-8ZW8CFNFNS'

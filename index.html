@@ -1,0 +1,247 @@
+---
+layout: default
+---
+
+<!-- Hero -->
+<section class="hero">
+  <div>
+    <div class="hero-tag">// Freelance Data Scientist</div>
+    <h1>Data science<br><span class="accent">rooted</span> in<br>rigorous research</h1>
+    <p class="hero-sub">10 years of academic research in neuroscience &amp; machine learning, now solving real-world data problems for businesses.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn">Get in touch</a>
+      <a href="#portfolio" class="btn-ghost">View portfolio</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-visual-top">
+      <div class="avatar">MN</div>
+      <div>
+        <div class="hero-name">Masaki Nakanishi, Ph.D</div>
+        <div class="hero-role">Data Scientist · AI Consultant</div>
+      </div>
+    </div>
+    <div class="stat-mini">
+      <div class="stat-mini-item">
+        <div class="stat-mini-num">27+</div>
+        <div class="stat-mini-label">publications</div>
+      </div>
+      <div class="stat-mini-item">
+        <div class="stat-mini-num">10</div>
+        <div class="stat-mini-label">years research</div>
+      </div>
+      <div class="stat-mini-item">
+        <div class="stat-mini-num">3</div>
+        <div class="stat-mini-label">book chapters</div>
+      </div>
+      <div class="stat-mini-item">
+        <div class="stat-mini-num">Ph.D</div>
+        <div class="stat-mini-label">Keio University</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Services -->
+<div id="services">
+  <div class="section">
+    <div class="section-mono">// 01. what i do</div>
+    <div class="section-title">Services</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01.</div>
+        <h3>Data Analysis &amp; Modeling</h3>
+        <p>Statistical modeling, ML pipelines, and predictive analytics tailored to your domain and goals.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02.</div>
+        <h3>AI &amp; Signal Processing</h3>
+        <p>Deep expertise in biological signal processing and neural data from a decade of BCI research.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03.</div>
+        <h3>Research Consulting</h3>
+        <p>Academic-grade rigor applied to your data problems — from study design to publication-ready analysis.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- Portfolio -->
+<div id="portfolio" class="section-alt">
+  <div class="section-alt-wrap">
+    <div class="section">
+      <div class="section-mono">// 02. work</div>
+      <div class="section-title">Selected projects</div>
+      <div class="projects-grid">
+        {% for project in site.data.projects %}
+        <div class="project-card">
+          <div class="project-thumb" style="background: {{ project.color }};"></div>
+          <div class="project-body">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <div class="tags">
+              {% for tag in project.tags %}
+              <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% if project.link %}
+            <br><a href="{{ project.link }}" target="_blank" class="pub-link">View paper →</a>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- Academic -->
+<div id="research">
+  <div class="section">
+    <div class="section-mono">// 03. research</div>
+    <div class="section-title">Academic achievements</div>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-num">27+</div>
+        <div class="stat-label">journal &amp; conf. papers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">10</div>
+        <div class="stat-label">years at UCSD &amp; Keio</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">3</div>
+        <div class="stat-label">book chapters</div>
+      </div>
+    </div>
+    <ul class="pub-list">
+      {% assign highlighted = site.data.publications | where: "highlight", true %}
+      {% for pub in highlighted %}
+      <li class="pub-item">
+        <div class="pub-year">{{ pub.year }}</div>
+        <div>
+          <div class="pub-title">{{ pub.title }}</div>
+          <div class="pub-journal">
+            {{ pub.journal }}
+            {% if pub.doi %}
+            <a href="https://doi.org/{{ pub.doi }}" target="_blank" class="pub-link">DOI →</a>
+            {% endif %}
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <br>
+    <a href="{{ '/publications/' | relative_url }}" class="btn-ghost">View all publications →</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- Testimonials -->
+<div id="testimonials" class="section-alt">
+  <div class="section-alt-wrap">
+    <div class="section">
+      <div class="slider-header">
+        <div>
+          <div class="section-mono">// 04. testimonials</div>
+          <div class="section-title">What clients say</div>
+        </div>
+        <div class="slider-controls">
+          <div class="slider-arrows">
+            <button class="s-arrow" id="t-prev">&#8592;</button>
+            <button class="s-arrow" id="t-next">&#8594;</button>
+          </div>
+          <div class="s-dots" id="t-dots"></div>
+        </div>
+      </div>
+      <div class="slider-wrap">
+        <div class="slider-track" id="t-track" style="gap:14px;">
+          {% for t in site.data.testimonials %}
+          <div class="testi-card">
+            <div class="testi-mark">"</div>
+            <p class="testi-text">{{ t.text }}</p>
+            <div class="testi-author">
+              <div class="testi-av">{{ t.initials }}</div>
+              <div>
+                <div class="testi-name">{{ t.name }}</div>
+                <div class="testi-role">{{ t.role }}</div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- Blog -->
+<div id="blog">
+  <div class="section">
+    <div class="slider-header">
+      <div>
+        <div class="section-mono">// 05. writing</div>
+        <div class="section-title">Latest posts</div>
+      </div>
+      <div class="slider-controls">
+        <div class="slider-arrows">
+          <button class="s-arrow" id="b-prev">&#8592;</button>
+          <button class="s-arrow" id="b-next">&#8594;</button>
+        </div>
+        <div class="s-dots" id="b-dots"></div>
+      </div>
+    </div>
+    <div class="slider-wrap">
+      <div class="slider-track" id="b-track" style="gap:14px;">
+        {% for post in site.posts %}
+        <a href="{{ post.url | relative_url }}" class="blog-card">
+          <div class="blog-thumb" style="background: {{ post.thumb_color | default: '#E6F1FB' }};"></div>
+          <div class="blog-body">
+            <div class="blog-date">{{ post.date | date: "%b %Y" }}</div>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 12 }}</p>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <br>
+    <a href="{{ '/blog/' | relative_url }}" class="btn-ghost">View all posts →</a>
+  </div>
+</div>
+
+<!-- Contact -->
+<div id="contact">
+  <div class="contact-section">
+    <div class="contact-inner">
+      <div class="section-mono">// 06. contact</div>
+      <div class="section-title">Let's work together</div>
+      <p class="contact-sub">Have a data problem to solve? Send me a message and I'll get back to you within 48 hours.</p>
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/{{ site.data.social.formspree_id }}" method="POST">
+        <div class="form-row">
+          <input class="form-input" type="text" name="name" placeholder="Your name" required />
+          <input class="form-input" type="email" name="email" placeholder="Your email" required />
+        </div>
+        <textarea class="form-textarea" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+        <button type="submit" class="form-submit">Send message</button>
+        <div id="form-success" class="form-success">// Message sent — I'll be in touch soon.</div>
+      </form>
+      <div class="social-row">
+        <a href="{{ site.data.social.github }}" target="_blank" class="social-link">GitHub</a>
+        <a href="{{ site.data.social.linkedin }}" target="_blank" class="social-link">LinkedIn</a>
+        <a href="{{ site.data.social.google_scholar }}" target="_blank" class="social-link">Google Scholar</a>
+        <a href="{{ site.data.social.researchgate }}" target="_blank" class="social-link">ResearchGate</a>
+      </div>
+    </div>
+  </div>
+</div>

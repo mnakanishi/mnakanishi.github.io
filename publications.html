@@ -1,0 +1,36 @@
+---
+layout: default
+title: Publications
+description: Full list of academic publications by Masaki Nakanishi, Ph.D
+---
+
+<div class="section">
+  <a href="{{ '/' | relative_url }}" class="back-link">← Back to home</a>
+  <div class="section-mono">// Research</div>
+  <div class="section-title">All publications</div>
+
+  {% assign sorted = site.data.publications | sort: "year" | reverse %}
+  {% assign years = sorted | map: "year" | uniq %}
+
+  {% for year in years %}
+  <h2 style="font-family:var(--mono);font-size:13px;color:var(--blue);margin:28px 0 8px;font-weight:400;">{{ year }}</h2>
+  <ul class="pub-list">
+    {% for pub in sorted %}
+    {% if pub.year == year %}
+    <li class="pub-item">
+      <div class="pub-year">{{ pub.year }}</div>
+      <div>
+        <div class="pub-title">{{ pub.title }}</div>
+        <div class="pub-journal">
+          {{ pub.journal }}
+          {% if pub.doi %}
+          <a href="https://doi.org/{{ pub.doi }}" target="_blank" class="pub-link">DOI →</a>
+          {% endif %}
+        </div>
+      </div>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</div>

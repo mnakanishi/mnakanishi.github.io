@@ -1,0 +1,22 @@
+# To add a new testimonial, copy one block below and fill in your details.
+# 'initials' should be 2 letters from the person's name.
+
+- name: Jane Smith
+  role: Head of Data, Acme Corp
+  initials: JS
+  text: "Masaki brought academic-grade rigor to our data pipeline. The insights were clear, actionable, and delivered on time."
+
+- name: Taro Kimura
+  role: CTO, DataFlow Inc
+  initials: TK
+  text: "Rare combination of deep research background and practical business sense. Highly recommend for any ML project."
+
+- name: Aiko Matsuda
+  role: VP Analytics, MedTech Ltd
+  initials: AM
+  text: "Exceptional ability to translate complex neuroscience methods into practical business data solutions. Will hire again."
+
+- name: Ryan Brooks
+  role: Director of Engineering, NeuralOps
+  initials: RB
+  text: "Delivered a machine learning model that exceeded our accuracy targets. Clear communicator and true expert in his field."

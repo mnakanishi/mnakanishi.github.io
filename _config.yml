@@ -1,0 +1,19 @@
+title: Nakanytics
+description: Freelance Data Science by Masaki Nakanishi, Ph.D
+url: "https://nakanytics.com"
+author: Masaki Nakanishi
+email: masaki@nakanytics.com
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

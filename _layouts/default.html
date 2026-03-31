@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} · Freelance Data Scientist{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+  {% seo %}
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+      <span class="w">NAKANY</span><span class="b">TICS</span>
+    </a>
+    <div class="nav-links">
+      <a href="{{ '/#services' | relative_url }}">Services</a>
+      <a href="{{ '/#portfolio' | relative_url }}">Portfolio</a>
+      <a href="{{ '/#research' | relative_url }}">Research</a>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+    </div>
+    <a href="{{ '/#contact' | relative_url }}" class="nav-cta">Contact me</a>
+  </nav>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="footer">
+    <div class="footer-copy">© {{ 'now' | date: "%Y" }} Nakanytics · Masaki Nakanishi, Ph.D</div>
+    <div class="nav-logo"><span class="w">NAKANY</span><span class="b">TICS</span></div>
+  </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

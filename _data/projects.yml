@@ -1,0 +1,15 @@
+# To add a new project, copy one block below and fill in your details.
+# 'color' is used for the thumbnail background. Use any CSS color.
+# 'link' is optional — set to the project URL or paper DOI if available.
+
+- title: High-speed BCI Speller
+  description: Brain-computer interface achieving record communication speeds using SSVEP and ML decoding. Published in PNAS.
+  tags: [Python, ML, Neuroscience]
+  color: "#E6F1FB"
+  link: "https://www.pnas.org/content/early/2015/10/14/1508080112"
+
+- title: Glaucoma Detection via BCI
+  description: Portable neuroimaging for objective visual function assessment in clinical ophthalmology. Published in JAMA.
+  tags: [EEG, Clinical, MATLAB]
+  color: "#B5D4F4"
+  link: "https://jamanetwork.com/journals/jamaophthalmology/fullarticle/2621879"

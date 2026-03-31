@@ -1,0 +1,26 @@
+---
+layout: default
+title: Blog
+description: Data science articles and insights by Masaki Nakanishi
+---
+
+<div class="section">
+  <div class="section-mono">// Writing</div>
+  <div class="section-title">All posts</div>
+
+  {% if site.posts.size == 0 %}
+  <p style="font-family:var(--mono);font-size:13px;color:var(--text-hint);">// No posts yet — check back soon.</p>
+  {% else %}
+  <ul class="pub-list">
+    {% for post in site.posts %}
+    <li class="pub-item">
+      <div class="pub-year">{{ post.date | date: "%b %Y" }}</div>
+      <div>
+        <a href="{{ post.url | relative_url }}" class="pub-title" style="color:var(--text);">{{ post.title }}</a>
+        <div class="pub-journal">{{ post.excerpt | strip_html | truncatewords: 18 }}</div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

@@ -1,0 +1,68 @@
+# To add a publication, copy one block below and fill in the details.
+# 'doi' is optional. 'highlight' marks featured publications shown on homepage.
+
+- year: 2023
+  title: "Stimulus design for visual evoked potential based brain-computer interfaces"
+  journal: "IEEE Trans. Neural Syst. Rehabil. Eng."
+  doi: "10.1109/TNSRE.2023.3280081"
+  highlight: true
+
+- year: 2023
+  title: "Revisiting polarity indeterminancy of ICA-decomposed ERPs and scalp topographies"
+  journal: "Brain Topogr."
+  doi: "10.1007/s10548-023-00944-1"
+  highlight: false
+
+- year: 2022
+  title: "Online adaptation boosts SSVEP-based BCI performance"
+  journal: "IEEE Trans. Biomed. Eng."
+  doi: "10.1109/TBME.2021.3133594"
+  highlight: false
+
+- year: 2021
+  title: "Boosting template-based SSVEP decoding by cross-domain transfer learning"
+  journal: "J. Neural Eng."
+  doi: "10.1088/1741-2552/abcb6e"
+  highlight: false
+
+- year: 2020
+  title: "Facilitating calibration in high-speed BCI spellers via leveraging cross-device shared latent responses"
+  journal: "IEEE Trans. Biomed. Eng."
+  doi: "10.1109/TBME.2019.2929745"
+  highlight: false
+
+- year: 2018
+  title: "Enhancing detection of SSVEPs for a high-speed brain speller using task-related component analysis"
+  journal: "IEEE Trans. Biomed. Eng."
+  doi: "10.1109/TBME.2017.2694818"
+  highlight: true
+
+- year: 2017
+  title: "Detecting glaucoma with a portable brain-computer interface for objective assessment of visual function loss"
+  journal: "JAMA Ophthalmol."
+  doi: "10.1001/jamaophthalmol.2017.0738"
+  highlight: true
+
+- year: 2015
+  title: "High-speed spelling with a noninvasive brain-computer interface"
+  journal: "Proc. Natl. Acad. Sci."
+  doi: "10.1073/pnas.1508080112"
+  highlight: true
+
+- year: 2015
+  title: "A comparison study of canonical correlation analysis based methods for detecting steady-state visual evoked potentials"
+  journal: "PLoS ONE"
+  doi: "10.1371/journal.pone.0140703"
+  highlight: false
+
+- year: 2014
+  title: "A high-speed brain speller using steady-state visual evoked potentials"
+  journal: "Int. J. Neural Syst."
+  doi: "10.1142/S0129065714500191"
+  highlight: false
+
+- year: 2014
+  title: "Generating visual flickers for eliciting robust steady-state visual evoked potentials at flexible frequencies"
+  journal: "PLoS ONE"
+  doi: "10.1371/journal.pone.0099235"
+  highlight: false
